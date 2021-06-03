@@ -1,0 +1,8 @@
+base:
+  version: '1.0'
+  css:
+    theme:
+      src/styling/example.css: {}
+  dependencies:
+    - core/drupal
+    - core/drupalSettings

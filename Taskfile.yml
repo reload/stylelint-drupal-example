@@ -1,0 +1,15 @@
+version: '3'
+
+tasks:
+  up:
+    cmds:
+      - lando start
+      - lando drush si --db-url=mysql://drupal9:drupal9@database/drupal9 -y
+      - lando drush theme:enable stylelintexample -y
+      - lando drush config-set system.theme default stylelintexample -y
+
+  reset:
+    cmds:
+      - lando destroy -y -vvv
+      - rm -r ./vendor
+      - rm -r ./web/themes/custom/stylelintexample/node_modules ./web/themes/custom/stylelintxample/dist

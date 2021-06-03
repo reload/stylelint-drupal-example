@@ -1,8 +1,10 @@
-# Parcel in Drupal 9
+# Reload stylelint in Drupal 9
 
-This is small example of a simple approach when wanting to utilize Parcel in Drupal.
-Parcel v2 is still in beta and might not be suitable for production quite yet.
-That said we do use it in production and have discovered no immediate problems.
+An example of Stylelint usage in a Reload Drupal context.
+
+Included is a vanilla CSS example and a bit more advanced SCSS example.
+
+The SCSS configuration also supports CSS which is examplified through `simple.css`.
 
 ## Getting up and running
 
@@ -18,4 +20,31 @@ task up
 
 ```
 task reset
+```
+
+### Usage
+
+Stylelint is used for code quality where as prettier is used for code style.
+The `@reloaddk/stylelint-recommended` packages have no code style opinions and
+relegate that responsability to the project in the form of prettier, additional
+added stylelint configs or rules.
+
+The commands below only apply for the non-scss example theme.
+
+#### Linting
+
+The `clean.css` shows an example of what is being checked. `notacolor` is not
+faulty CSS and therefore not something that is neither checked nor fixable. 
+
+```
+task lint
+```
+
+#### Formatting
+
+Some things can be auto fixed in `error.css` but some things like
+`Do not use empty rulesets` is not auto-fixable.
+
+```
+task fmt
 ```

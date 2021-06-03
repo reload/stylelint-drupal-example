@@ -1,4 +1,4 @@
-name: parcel-drupal-example
+name: stylelint-drupal-example
 recipe: drupal9
 config:
   composer_version: '2.0.7'
@@ -13,7 +13,8 @@ services:
   node:
     type: node:14
     build:
-      - "cd /app/web/themes/custom/stylelintexample && npm install && npm run build"
+      - "cd /app/web/themes/custom/stylelintexample && npm install"
+      - "cd /app/web/themes/custom/stylelintscssexample && npm install"
   appserver:
     build:
       - composer install

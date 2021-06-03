@@ -11,5 +11,11 @@ tasks:
   reset:
     cmds:
       - lando destroy -y -vvv
-      - rm -r ./vendor
-      - rm -r ./web/themes/custom/stylelintexample/node_modules ./web/themes/custom/stylelintxample/dist
+
+  lint:
+    cmds:
+      - lando npm run lint
+  
+  fmt:
+    cmds:
+      - lando npm run fmt

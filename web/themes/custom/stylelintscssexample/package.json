@@ -1,0 +1,22 @@
+{
+  "name": "stylelint-scss-example",
+  "version": "0.1.0",
+  "description": "An example of Reload stylelint usage in Drupal 9.",
+  "private": true,
+  "scripts": {
+    "prettier:check": "prettier \"./src/styling**/*.(scss|css)\" --check",
+    "prettier:write": "prettier \"./src/styling**/*.(scss|css)\" --write",
+    "stylelint": "stylelint \"./src/styling/**/*.(scss|css)\"",
+    "stylelint:fix": "stylelint \"./src/styling/**/*.(scss|css)\" --fix",
+    "lint": "concurrently -n stylelint,prettier \"npm:stylelint\" \"npm:prettier:check\" --max-processes=1",
+    "fmt": "concurrently -n stylelint,prettier \"npm:stylelint:fix\" \"npm:prettier:write\" --max-processes=1",
+    "build": "sass src/styling:dist/styling"
+  },
+  "devDependencies": {
+    "@reloaddk/stylelint-recommended-scss": "^0.1.0",
+    "concurrently": "^6.2.0",
+    "prettier": "^2.3.0",
+    "sass": "^1.34.1",
+    "stylelint": "^13.13.1"
+  }
+}

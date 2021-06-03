@@ -2,7 +2,7 @@ base:
   version: '1.0'
   css:
     theme:
-      src/styling/clean.css: {}
+      dist/styling/clean.css: {}
   dependencies:
     - core/drupal
     - core/drupalSettings

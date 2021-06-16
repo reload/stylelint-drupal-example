@@ -1,7 +1,8 @@
 # Reload stylelint in Drupal 9
 
 An example of Stylelint usage in a Reload Drupal context.
-Included is a vanilla CSS example and a bit more advanced SCSS example.
+Included is a vanilla CSS example, a bit more advanced SCSS example and an example of project root level configuration.
+The included github actions is also representative of what would be desired from a project in regards to automation.
 The SCSS configuration also supports CSS which is examplified through `simple.css`.
 
 ## Required for getting a style linting setup running in your project.

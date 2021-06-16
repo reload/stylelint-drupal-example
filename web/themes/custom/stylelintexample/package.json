@@ -4,8 +4,8 @@
   "description": "An example of Reload stylelint usage in Drupal 9.",
   "private": true,
   "scripts": {
-    "prettier:check": "prettier ./src/styling**/*.css --check",
-    "prettier:write": "prettier ./src/styling**/*.css --write",
+    "prettier:check": "prettier ./src/styling/**/*.css --check",
+    "prettier:write": "prettier ./src/styling/**/*.css --write",
     "stylelint": "stylelint ./src/styling/**/*.css",
     "stylelint:fix": "stylelint ./src/styling/**/*.css --fix",
     "lint": "concurrently -n stylelint,prettier \"npm:stylelint\" \"npm:prettier:check\" --max-processes=1",

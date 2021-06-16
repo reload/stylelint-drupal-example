@@ -1,0 +1,21 @@
+{
+    "name": "stylelint-root-example",
+    "version": "0.1.0",
+    "description": "An example of Reload stylelint usage in Drupal 9 with package.json at the root level.",
+    "private": true,
+    "scripts": {
+      "prettier:check": "prettier \"**/*.(scss|css)\" --check",
+      "prettier:write": "prettier \"**/*.(scss|css)\" --write",
+      "stylelint": "stylelint \"**/*.(scss|css)\"",
+      "stylelint:fix": "stylelint \"**/*.(scss|css)\" --fix",
+      "lint": "concurrently -n stylelint,prettier \"npm:stylelint\" \"npm:prettier:check\" --max-processes=1",
+      "fmt": "concurrently -n stylelint,prettier \"npm:stylelint:fix\" \"npm:prettier:write\" --max-processes=1"
+    },
+    "devDependencies": {
+      "@reloaddk/stylelint-recommended-scss": "^0.1.0",
+      "concurrently": "^6.2.0",
+      "prettier": "^2.3.0",
+      "stylelint": "^13.13.1"
+    }
+  }
+  

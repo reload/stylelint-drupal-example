@@ -98,3 +98,4 @@ web/sites/simpletest
 /web/themes/README.txt
 /.editorconfig
 /.gitattributes
+node_modules

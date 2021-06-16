@@ -39,4 +39,14 @@ jobs:
       - uses: actions/checkout@v2
       - run: npm ci
       - run: npm run lint
-
+  # Wanting to add stylelint to an old project and only wanting to check new code.
+  reviewdog:
+    name: Reviewdog Lint
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: reviewdog/action-stylelint@v1
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          reporter: github-pr-review
+          stylelint_input: '**/*.(css|scss)'
